@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class Question extends StatelessWidget {
   String number;
@@ -36,11 +37,15 @@ class Question extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: Text(
               question,
-              style: TextStyle(fontSize: 25),
+              style: TextStyle(fontSize: 20),
             ),
           ),
         ),
       ],
-    );
+    )
+        .animate()
+        .fadeIn(
+        curve: Curves.easeIn,
+        duration: Duration(seconds: 3));
   }
 }

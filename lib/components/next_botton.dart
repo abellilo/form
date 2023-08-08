@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class NextButton extends StatelessWidget {
   NextButton({Key? key, required this.onTap, required this.page_value}) : super(key: key);
@@ -46,6 +47,6 @@ class NextButton extends StatelessWidget {
           ),
         ),
       ],
-    );
+    ).animate().scale(duration: Duration(seconds: 2), curve: Curves.easeIn);
   }
 }
